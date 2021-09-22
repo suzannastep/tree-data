@@ -338,7 +338,7 @@ dynverse_tree <- generate_dataset(
 )
 dynverse_tree <- form_tree_from_dataset(dynverse_tree)
 write.table(dynverse_tree$matrix,file='TITesting.nosync/dynversetree/dynversetree.csv',row.names=FALSE,sep=',')
-dynverse_tree <- run_methods(dynverse_tree,'TITesting.nosync/dynversetree/EBMFfactors/')
+dynverse_tree <- run_methods(dynverse_tree,'TITesting.nosync/dynversetree/EBMFfactors/',Kmax=40,eps = 1e-2)
 
 #issues/questions with drift_fit
   #1 what to choose eps to be? choose eps adaptively? Better way to force more sparsity than brute forcing this?
